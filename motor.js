@@ -28,9 +28,25 @@ function detectarDerrota() {
 function spawneaMeteorito() {
     const meteorito = document.createElement('div');
     meteorito.classList.add('meteorito');
-    document.getElementById('background').appendChild(meteorito);
-    meteorito.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+    
+    // ancho de la pantalla
+    const screenWidth = window.innerWidth;
 
+    // definir el rango del centro (25% al 75%)
+    const margenCentro = 0.25 * screenWidth; // 35% de margen a cada lado
+    const centroInicio = margenCentro; // Empieza en 25%
+    const centroFin = screenWidth * 0.75 - (meteorito.offsetWidth*5); // Termina en 75%
+    
+    // posición X aleatoria dentro del centro (25% - 75%)
+    const posX = centroInicio + (Math.random() * (centroFin - centroInicio));
+    
+    // aplicar posición al meteorito
+    meteorito.style.left = `${posX}px`;
+    
+    // añadir al DOM
+    document.getElementById('background').appendChild(meteorito);
+    
+    // Eliminar al finalizar la animación (y restar vidas)
     meteorito.addEventListener('animationend', () => {
         meteorito.remove();
     });
@@ -129,3 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
         personaje.style.left = `${posicion}px`;
     });
 });
+
+function spawnLoop() {
+    spawneaMeteorito();
+    setTimeout(spawnLoop, 1000); 
+}
+
+spawnLoop();
