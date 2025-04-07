@@ -1,26 +1,3 @@
-/**
- * Suma puntos al jugador
- * @param {number} suma 
- */
-function sumarPuntos(suma) {
-
-    if (!suma) {
-        suma = 1;
-    }
-
-    document.getElementById("puntos").innerHTML = parseInt(document.getElementById("puntos").innerHTML) + suma;
-}
-
-/**
- * Detecta si el jugador perdió
- * @returns {Boolean}
- */
-function detectarDerrota() {
-    if (parseInt(document.getElementById("puntos").innerHTML) > 0) {
-        return false;
-    }
-    return true;
-}
 document.addEventListener('DOMContentLoaded', () => {
     const personaje = document.getElementById('personaje');
     const fondo = document.getElementById('background');
@@ -114,17 +91,3 @@ document.addEventListener('DOMContentLoaded', () => {
         personaje.style.left = `${posicion}px`;
     });
 });
-
-/**
- * Esta funcion crea aleatoriamente meteoritos en un area especifica de la pantalla
- */
-async function spawneaMeteorito() {
-    const meteorito = document.createElement('div');
-    meteorito.classList.add('meteorito');
-    document.getElementById('background').appendChild(meteorito);
-    meteorito.style.left = Math.random() * (window.innerWidth - 50) + 'px';
-
-    meteorito.addEventListener('animationend', () => {
-        meteorito.remove();
-    });
-}
