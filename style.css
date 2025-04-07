@@ -25,6 +25,15 @@
     padding: 10px;  
 }
 
+#meteorito{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    scale: 0.15;
+    animation: rotacion 3s linear infinite;   
+}
+
 #personaje {
     position: absolute;
     width: 60px;
@@ -37,4 +46,9 @@
     cursor: pointer;
     transition: left 0.2s ease-in-out;
     z-index: 2;
+}
+
+@keyframes rotacion {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } 
 }
