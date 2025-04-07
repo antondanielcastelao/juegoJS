@@ -129,3 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
         personaje.style.left = `${posicion}px`;
     });
 });
+
+function spawnLoop() {
+    spawneaMeteorito();
+    setTimeout(spawnLoop, 1000); // Vuelve a llamarse después de 1s
+}
+
+spawnLoop();
