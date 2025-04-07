@@ -1,3 +1,7 @@
+/**
+ * Suma puntos al jugador
+ * @param {number} suma 
+ */
 function sumarPuntos(suma) {
 
     if (!suma) {
