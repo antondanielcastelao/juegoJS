@@ -55,3 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
         personaje.style.left = `${posicion}px`;
     });
 });
+
+/**
+ * Esta funcion crea aleatoriamente meteoritos en un area especifica de la pantalla
+ */
+async function spawneaMeteorito() {
+    const meteorito = document.createElement('div');
+    meteorito.classList.add('meteorito');
+    document.getElementById('background').appendChild(meteorito);
+    meteorito.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+
+    meteorito.addEventListener('animationend', () => {
+        meteorito.remove();
+    });
+}

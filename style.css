@@ -18,20 +18,22 @@
     width: 100px;
     height: 100px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;  
 }
 
-#meteorito{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.meteorito{
+    position: fixed;
+    background-image: url('img/meteorito.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 2;
-    scale: 0.15;
-    animation: rotacion 3s linear infinite;   
+    width: 130px;
+    height: 130px;
+    animation: caer-y-rotar 4s linear forwards; 
+ 
 }
 
 #personaje {
@@ -43,12 +45,16 @@
     background-image: url('img/nave.gif');
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
     transition: left 0.2s ease-in-out;
     z-index: 2;
+    
 }
 
-@keyframes rotacion {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); } 
+@keyframes caer-y-rotar {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }
