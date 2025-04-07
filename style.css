@@ -8,6 +8,8 @@
     top: 0px;
     left: 0px;
     z-index: 1;
+    image-rendering: pixelated;
+
 }
 
 #puntuacion{
@@ -47,6 +49,35 @@
     background-repeat: no-repeat;
     transition: left 0.2s ease-in-out;
     z-index: 2;
+    image-rendering: pixelated;
+
+}
+
+#bala {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background-image: url('img/bala.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 2;
+    animation: disparo 1s linear forwards;
+}
+
+#municion {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    z-index: 3;
+}
+
+@keyframes disparo {
+    to { top: -30px; }
     
 }
 
