@@ -7,6 +7,10 @@ function sumarPuntos(suma) {
     document.getElementById("puntos").innerHTML = parseInt(document.getElementById("puntos").innerHTML) + suma;
 }
 
+/**
+ * Detecta si el jugador perdió
+ * @returns {Boolean}
+ */
 function detectarDerrota() {
     if (parseInt(document.getElementById("puntos").innerHTML) > 0) {
         return false;
