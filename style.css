@@ -1,27 +1,20 @@
-#background{
-    background-image: url(img/fondo.gif);
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-}
+
 
 #puntuacion{
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 300px;
     z-index: 2;
     width: 100px;
     height: 100px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
-    padding: 10px;  
+    padding: 20px;  
+    font-family: 'Chicalo';
+    letter-spacing: 3.5px;
+
 }
 
 .meteorito{
@@ -36,19 +29,7 @@
  
 }
 
-#personaje {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    left: 0;
-    background-image: url('img/nave.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: left 0.2s ease-in-out;
-    z-index: 2;
-    
-}
+
 
 @keyframes caer-y-rotar {
     0% {
@@ -100,14 +81,22 @@
 #municion {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 300px;
     color: white;
-    font-size: 32px;
-    font-family: 'Arial', sans-serif;
+    font-size: 70px;
+    font-family: 'Chicalo';
     text-shadow: 2px 2px 2px black;
     z-index: 3;
 }
 
 @keyframes disparo {
     to { top: -30px; }
+}
+
+@font-face {
+    font-family: 'Chicalo';
+    src: url('fuente/Chicalo.otf') format('truetype'), 
+         url('fonts/chicalo.otf') format('opentype'); 
+         font-weight: normal;
+    font-style: normal;
 }
