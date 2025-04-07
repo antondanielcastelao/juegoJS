@@ -3,7 +3,6 @@
  * @param {number} suma 
  */
 function sumarPuntos(suma) {
-<<<<<<< HEAD
 
     if (!suma) {
         suma = 1;
@@ -56,23 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
         personaje.style.left = `${posicion}px`;
     });
 });
-=======
-
-    if (!suma) {
-        suma = 1;
-    }
-
-    document.getElementById("puntos").innerHTML = parseInt(document.getElementById("puntos").innerHTML) + suma;
-}
-
-/**
- * Detecta si el jugador perdió
- * @returns {Boolean}
- */
-function detectarDerrota() {
-    if (parseInt(document.getElementById("puntos").innerHTML) > 0) {
-        return false;
-    }
-    return true;
-}
->>>>>>> 148efcdfb405be35cebe771e95f3beb52d775bad

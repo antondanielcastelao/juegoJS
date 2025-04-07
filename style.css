@@ -11,7 +11,6 @@
 }
 
 #puntuacion{
-<<<<<<< HEAD
     position: absolute;
     top: 0px;
     left: 0px;
@@ -36,27 +35,20 @@
 }
 
 #personaje {
-=======
->>>>>>> 148efcdfb405be35cebe771e95f3beb52d775bad
     position: absolute;
-    top: 0px;
-    left: 0px;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 0;
+    background-image: url('img/nave.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: left 0.2s ease-in-out;
     z-index: 2;
-<<<<<<< HEAD
 }
 
 @keyframes rotacion {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); } 
 }
-=======
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;  
-}
->>>>>>> 148efcdfb405be35cebe771e95f3beb52d775bad
